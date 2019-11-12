@@ -1,0 +1,25 @@
+{
+  "name": "liquipedia-csgo",
+  "version": "1.0.0",
+  "description": "This library is a wrapper around Liquipedia's API for https://liquipedia.net/counterstrike.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "nyc --reporter=lcov --reporter=text --check-coverage mocha --recursive --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benyamin-noori/liquipedia-counter-strike.git"
+  },
+  "keywords": [
+    "counter-strike",
+    "csgo",
+    "cs:go",
+    "liquipedia"
+  ],
+  "author": "Benyamin Noori",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benyamin-noori/liquipedia-counter-strike/issues"
+  },
+  "homepage": "https://github.com/benyamin-noori/liquipedia-counter-strike#readme"
+}
