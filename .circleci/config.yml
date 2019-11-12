@@ -44,7 +44,7 @@ workflows:
   default:
     jobs:
       - build:
-          context: ci-read
+          context: liquipedia-csgo
           filters:
             tags:
               only: /.*/
@@ -55,5 +55,5 @@ workflows:
               only: /.*/
       - deploy:
           <<: *run_on_master
-          context: ci-write
+          context: liquipedia-csgo
           requires: [test]
