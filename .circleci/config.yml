@@ -12,7 +12,7 @@ references:
     run_on_master: &run_on_master
       filters:
         branches:
-          only: setup_ci
+          only: master
 
 jobs:
   build:
