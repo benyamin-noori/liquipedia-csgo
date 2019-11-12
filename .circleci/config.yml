@@ -1,0 +1,60 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2.1
+
+defaults: &defaults
+  docker:
+    - image: circleci/node:8.10
+
+references:
+    run_on_master: &run_on_master
+      filters:
+        branches:
+          only: master
+
+jobs:
+  build:
+    <<: *defaults
+    steps:
+      - checkout
+      - run: npm install
+      - persist_to_workspace:
+          root: ../
+          paths: ./*
+
+  test:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run: npm test
+
+  deploy:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > .npmrc
+      - run: npm publish
+
+
+workflows:
+  version: 2
+  default:
+    jobs:
+      - build:
+          context: liquipedia-csgo
+          filters:
+            tags:
+              only: /.*/
+      - test:
+          requires: [build]
+          filters:
+            tags:
+              only: /.*/
+      - deploy:
+          <<: *run_on_master
+          context: liquipedia-csgo
+          requires: [test]
