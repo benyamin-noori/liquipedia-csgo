@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "This library is a wrapper around Liquipedia's API for https://liquipedia.net/counterstrike.",
   "main": "src/index.js",
+  "type": "module",
   "scripts": {
     "test": "nyc --reporter=lcov --reporter=text --check-coverage mocha --recursive --exit"
   },
@@ -21,5 +22,11 @@
   "bugs": {
     "url": "https://github.com/benyamin-noori/liquipedia-counter-strike/issues"
   },
-  "homepage": "https://github.com/benyamin-noori/liquipedia-counter-strike#readme"
+  "homepage": "https://github.com/benyamin-noori/liquipedia-counter-strike#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.15.3",
+    "mocha": "^6.1.4",
+    "nyc": "^14.1.1"
+  }
 }
