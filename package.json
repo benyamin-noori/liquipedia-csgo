@@ -5,7 +5,9 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "test": "nyc --reporter=lcov --reporter=text --check-coverage mocha --recursive --exit"
+    "test": "nyc --reporter=lcov --reporter=text --check-coverage mocha --recursive --exit",
+    "lint": "eslint .",
+    "posttest": "npm run lint"
   },
   "repository": {
     "type": "git",

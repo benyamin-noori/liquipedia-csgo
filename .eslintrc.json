@@ -1,7 +1,9 @@
 {
-	"extends": "brightspace/node-config",
-	"parserOptions": {
-		"ecmaVersion": 8,
-		"sourceType": "module"
-	}
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    },
+    "rules": {
+        "semi": "error"
+    }
 }
