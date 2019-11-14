@@ -1,7 +1,2 @@
-class CounterStrike {
-    constructor() {
-        
-    }
-};
-
-export default CounterStrike;
+const CounterStrike = require('./counterstrike');
+module.exports = CounterStrike;
