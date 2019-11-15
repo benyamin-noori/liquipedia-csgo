@@ -4,3 +4,7 @@
 
 # liquipedia-csgo
 Wrapper for Liquipedia's CSGO API. 
+
+
+# Acknowledgements
+[Liquipedia CounterStrike](https://liquipedia.net/counterstrike/) is the source of all the information provided by this library.
