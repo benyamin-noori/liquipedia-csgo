@@ -36,5 +36,9 @@
     "lines": 100,
     "functions": 100,
     "statements": 100
+  },
+  "dependencies": {
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.8"
   }
 }
