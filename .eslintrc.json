@@ -35,6 +35,7 @@
       },
       "globals": {
           "module": false,
-          "require": false
+          "require": false,
+          "Promise": false
       }
 }
