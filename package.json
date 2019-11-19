@@ -1,6 +1,6 @@
 {
   "name": "liquipedia-csgo",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "This library is a wrapper around Liquipedia's API for https://liquipedia.net/counterstrike.",
   "main": "src/index.js",
   "type": "module",
